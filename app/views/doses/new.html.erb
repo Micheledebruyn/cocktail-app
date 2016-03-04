@@ -1,0 +1,10 @@
+<h1>ingredients + doses for <%= @cocktail.name %></h1>
+
+<%= link_to 'Back to cocktails', cocktail_path(@cocktail) %>
+
+
+<%= simple_form_for [:cocktail, @dose] do |f| %>
+  <%= f.input :description %>
+  <%= f.collection_select(:ingredient_id, @ingredients, :id, :name) %>
+  <%= f.button :submit %>
+<% end %>
