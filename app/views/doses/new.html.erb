@@ -5,6 +5,6 @@
 
 <%= simple_form_for [:cocktail, @dose] do |f| %>
   <%= f.input :description %>
-  <%= f.collection_select(:ingredient_id, @ingredients, :id, :name) %>
+  <%= f.input :ingredient_id, collection: @ingredients %>
   <%= f.button :submit %>
 <% end %>

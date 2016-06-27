@@ -61,5 +61,11 @@ gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'autoprefixer-rails'
 
-# Gem for image upload
+# Gem for protection
 gem 'figaro'
+
+#Gem for image upload
+gem 'cloudinary'
+
+#gem to upload files
+gem 'carrierwave'

@@ -1,25 +1,18 @@
+<div class="container" style="text-align: center">
 <h1>Mister cocktail app</h1>
+
+<%= cl_image_tag("bkrzu4gvbacya2lpxd2m.jpg",
+      width: 400, height: 300, crop: :fill) %>
 <hr>
 <table class="table">
-  <tr>
-    <th>cocktail name</th>
-    <th>ingredient name</th>
-    <th>ingredient dose</th>
-    <th>options</th>
-  </tr>
 <% @cocktails.each do |cocktail| %>
   <tr>
     <td><%=  cocktail.name %>    </td>
-    <% cocktail.ingredients.each do |ingredient| %>
-    <td><%= ingredient.name %></td>
-    <% ingredient.doses.each do|dose| %>
-    <td><%= dose.description %></td>
-    <% end %>
-    <% end %>
+    <%# end %>
     <td>
+  <%= link_to 'Show', cocktail_path(cocktail), class:"btn btn-danger" %>  
 <%= link_to 'Edit', edit_cocktail_path(cocktail), class:"btn btn-danger" %>
-<%= link_to 'Add ingredients', new_cocktail_dose_path(cocktail), class:"btn btn-danger" %>
-<%= link_to 'Delete', cocktail_path(cocktail), method: :delete,class:"btn btn-danger" %></td>
+<%= link_to 'Delete', cocktail_path(cocktail), method: :delete, class:"btn btn-danger" %></td>
     <% end %>
   </tr>
 </table>
@@ -28,3 +21,11 @@
 
   <%= link_to "New cocktail", new_cocktail_path, class:"btn btn-danger" %>
 
+</div>
+
+
+<ul>
+  <li>
+    
+  </li>
+</ul>
